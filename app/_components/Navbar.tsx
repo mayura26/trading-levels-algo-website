@@ -1,3 +1,6 @@
+// TODO: Add a logo
+// TODO: Add color offset to bar background
+
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';

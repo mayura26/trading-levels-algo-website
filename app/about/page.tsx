@@ -1,3 +1,4 @@
+// TODO: Create more structured page with picture and text
 export default function About() {
     return (
       <div className="min-h-screen bg-[url('/trading-background.jpg')] bg-cover bg-center bg-no-repeat">

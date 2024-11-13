@@ -1,3 +1,4 @@
+// TODO: Just use one pricing plan for now
 export default function Pricing() {
     return (
       <div className="min-h-screen bg-[url('/trading-background.jpg')] bg-cover bg-center bg-no-repeat">

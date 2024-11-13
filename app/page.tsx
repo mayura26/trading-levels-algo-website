@@ -1,3 +1,5 @@
+// TODO: Split image into top section, and then features in second section
+// TODO: Add space for video
 export default function Home() {
   return (
     // Main container with a background image

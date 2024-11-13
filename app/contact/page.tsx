@@ -1,3 +1,6 @@
+// TODO: Add a form to send messages to the admin
+// TODO: Spread out the form over the page
+
 export default function Contact() {
     return (
       <div className="min-h-screen bg-[url('/trading-background.jpg')] bg-cover bg-center bg-no-repeat">
