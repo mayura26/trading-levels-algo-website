@@ -1,58 +1,125 @@
-// TODO: Add a form to send messages to the admin
-// TODO: Spread out the form over the page
+'use client'
+
+import { Input, Textarea, Button } from "@nextui-org/react";
+import { useRef, useState } from "react";
 
 export default function Contact() {
+    const formRef = useRef<HTMLFormElement>(null);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [message, setMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
+
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+      e.preventDefault();
+      setIsSubmitting(true);
+      setMessage(null);
+
+      try {
+        const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+          method: 'POST',
+          body: new FormData(e.currentTarget),
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          setMessage({ type: 'success', text: 'Thank you for your message! We\'ll get back to you soon.' });
+          formRef.current?.reset();
+        } else {
+          setMessage({ type: 'error', text: 'Failed to send message. Please try again.' });
+        }
+      } catch (error) {
+        setMessage({ type: 'error', text: 'Failed to send message. Please try again.' });
+      } finally {
+        setIsSubmitting(false);
+      }
+    }
+
     return (
       <div className="min-h-screen bg-[url('/trading-background.jpg')] bg-cover bg-center bg-no-repeat">
-        <div className="min-h-screen bg-black/50 flex flex-col items-center justify-center p-8 text-white">
-          <main className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6">Contact Us</h1>
+        <div className="min-h-screen bg-black/50 flex flex-col items-center p-4 sm:p-8 text-white">
+          <main className="w-full max-w-5xl mx-auto">
+            <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-center">Contact Us</h1>
             
-            <div className="bg-black/30 backdrop-blur-sm rounded-xl p-8 mt-8">
-              <form className="space-y-6 text-left">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2">
-                    Name
-                  </label>
-                  <input
+            <div className="bg-black/30 backdrop-blur-sm rounded-md p-4 sm:p-8 mt-4 sm:mt-8">
+              <form 
+                ref={formRef}
+                onSubmit={handleSubmit}
+                className="space-y-6 sm:space-y-8"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                  <Input
+                    name="name"
                     type="text"
-                    id="name"
-                    className="w-full px-4 py-2 rounded-md bg-black/30 border border-gray-600 focus:border-blue-500 focus:outline-none"
+                    label="Name"
+                    labelPlacement="outside"
+                    placeholder="Enter your name"
+                    isRequired
+                    radius="sm"
+                    classNames={{
+                      input: "bg-black/30 text-white",
+                      label: "text-white",
+                      inputWrapper: "border border-white/20 hover:border-white/40 transition-colors",
+                    }}
                   />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">
-                    Email
-                  </label>
-                  <input
+                  
+                  <Input
+                    name="email"
                     type="email"
-                    id="email"
-                    className="w-full px-4 py-2 rounded-md bg-black/30 border border-gray-600 focus:border-blue-500 focus:outline-none"
+                    label="Email"
+                    labelPlacement="outside"
+                    placeholder="Enter your email"
+                    isRequired
+                    radius="sm"
+                    classNames={{
+                      input: "bg-black/30 text-white",
+                      label: "text-white",
+                      inputWrapper: "border border-white/20 hover:border-white/40 transition-colors",
+                    }}
                   />
                 </div>
+
+                <Textarea
+                  name="message"
+                  label="Message"
+                  labelPlacement="outside"
+                  placeholder="Type your message here..."
+                  minRows={8}
+                  isRequired
+                  radius="sm"
+                  classNames={{
+                    input: "bg-black/30 text-white",
+                    label: "text-white",
+                    inputWrapper: "border border-white/20 hover:border-white/40 transition-colors",
+                  }}
+                />
                 
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    className="w-full px-4 py-2 rounded-md bg-black/30 border border-gray-600 focus:border-blue-500 focus:outline-none"
-                  ></textarea>
-                </div>
-                
-                <button
+                {message && (
+                  <div 
+                    className={`p-4 rounded-md ${
+                      message.type === 'success' 
+                        ? 'bg-green-500/20 text-green-200' 
+                        : 'bg-red-500/20 text-red-200'
+                    }`}
+                  >
+                    {message.text}
+                  </div>
+                )}
+
+                <Button
                   type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition duration-200"
+                  color="primary"
+                  size="lg"
+                  radius="sm"
+                  className="w-full md:w-auto md:min-w-[200px] font-medium"
+                  isLoading={isSubmitting}
                 >
-                  Send Message
-                </button>
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </Button>
               </form>
             </div>
           </main>
         </div>
       </div>
     );
-  }
+}
