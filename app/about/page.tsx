@@ -1,10 +1,11 @@
 // TODO: Create more structured page with picture and text
 export default function About() {
     return (
-      <div className="min-h-screen bg-[url('/trading-background.jpg')] bg-cover bg-center bg-no-repeat">
-        <div className="min-h-screen bg-black/50 flex flex-col items-center justify-center p-8 text-white">
-          <main className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6">About Us</h1>
+      <div>
+      <section className="max-w-[1200px] mx-auto px-4 py-8">
+        <h1 className="text-2xl md:text-4xl font-bold text-center mb-4 pb-2 border-b-2 border-primary">
+          About Us
+        </h1>
             
             <div className="bg-black/30 backdrop-blur-sm rounded-xl p-8 mt-8 text-left">
               <p className="mb-4">
@@ -23,12 +24,11 @@ export default function About() {
               <ul className="list-disc list-inside space-y-2">
                 <li>Unique trading strategies</li>
                 <li>Optimised for consistency</li>
-                <li>Dedicated support team</li>
+                <li>Discord support</li>
                 <li>Continuous algorithm improvements</li>
               </ul>
             </div>
-          </main>
+          </section>
         </div>
-      </div>
     );
   }

@@ -14,7 +14,7 @@ export default function Contact() {
       setMessage(null);
 
       try {
-        const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+        const response = await fetch('https://formspree.io/f/mgveyrvk', {
           method: 'POST',
           body: new FormData(e.currentTarget),
           headers: {
@@ -36,10 +36,11 @@ export default function Contact() {
     }
 
     return (
-      <div className="min-h-screen bg-[url('/trading-background.jpg')] bg-cover bg-center bg-no-repeat">
-        <div className="min-h-screen bg-black/50 flex flex-col items-center p-4 sm:p-8 text-white">
-          <main className="w-full max-w-5xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-center">Contact Us</h1>
+      <div>
+      <section className="max-w-[1200px] mx-auto px-4 py-8">
+        <h1 className="text-2xl md:text-4xl font-bold text-center mb-4 pb-2 border-b-2 border-primary">
+          Contact Us
+        </h1>
             
             <div className="bg-black/30 backdrop-blur-sm rounded-md p-4 sm:p-8 mt-4 sm:mt-8">
               <form 
@@ -118,8 +119,7 @@ export default function Contact() {
                 </Button>
               </form>
             </div>
-          </main>
+          </section>
         </div>
-      </div>
     );
 }

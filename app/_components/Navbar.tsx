@@ -31,7 +31,7 @@ export default function NavbarComponent() {
       onMenuOpenChange={setIsMenuOpen}
       shouldHideOnScroll
       isBordered
-      className="bg-black/80 backdrop-blur-sm"
+      className="bg-black/80 backdrop-blur-sm h-20"
     >
       <NavbarContent>
         <NavbarMenuToggle
@@ -39,7 +39,7 @@ export default function NavbarComponent() {
           className="sm:hidden text-white"
         />
         <NavbarBrand>
-          <Link href="/" className="font-bold text-inherit text-white">
+          <Link href="/" className="font-bold text-inherit text-white text-xl md:text-2xl tracking-wide">
             Trading Levels Algo
           </Link>
         </NavbarBrand>
@@ -52,7 +52,7 @@ export default function NavbarComponent() {
               as={Link}
               href={link.href}
               color={pathname === link.href ? "primary" : "foreground"}
-              className="text-white"
+              className={`text-white ${pathname === link.href ? 'font-bold border-b-2 border-primary pb-1' : 'opacity-70 hover:opacity-100'}`}
             >
               {link.name}
             </NextUILink>
@@ -67,7 +67,7 @@ export default function NavbarComponent() {
               as={Link}
               href={link.href}
               color={pathname === link.href ? "primary" : "foreground"}
-              className="w-full text-white"
+              className={`w-full text-white ${pathname === link.href ? 'font-bold bg-primary/20 px-4 py-2 rounded-lg' : 'opacity-70 hover:opacity-100'}`}
               size="lg"
               onClick={() => setIsMenuOpen(false)}
             >
