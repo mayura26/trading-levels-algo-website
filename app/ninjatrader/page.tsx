@@ -1,4 +1,4 @@
-import { Button, Card, CardBody, CardHeader } from '@nextui-org/react';
+import { Button, Card, CardBody, Image } from '@nextui-org/react';
 import Link from 'next/link';
 
 export default function NinjaTrader() {
@@ -12,7 +12,7 @@ export default function NinjaTrader() {
         <Card className="shadow-md">
           <CardBody className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6">
             <div className="h-full flex items-center">
-              <img
+              <Image
                 src="/media-kit/NinjaTrader-Logo.png"
                 alt="NinjaTrader Platform"
                 className="w-full h-auto"
@@ -43,7 +43,7 @@ export default function NinjaTrader() {
               </Card>
 
               <p>
-                NinjaTrader's award-winning{' '}
+                NinjaTrader&apos;s award-winning{' '}
                 <Link href="http://ninjatrader.com/GetStarted" className="text-primary" target="_blank" rel="noopener">
                   trading platform
                 </Link>{' '}
@@ -83,7 +83,7 @@ export default function NinjaTrader() {
                     <Link href="http://kinetick.com/NinjaTrader" className="text-primary hover:underline" target="_blank" rel="noopener">
                       market data
                     </Link>{' '}
-                    to help level the playing field for active traders. Take advantage of unfiltered, real time quotes for stocks, futures and forex that exceed the expectations of the world's most demanding traders, like us!
+                    to help level the playing field for active traders. Take advantage of unfiltered, real time quotes for stocks, futures and forex that exceed the expectations of the world&apos;s most demanding traders, like us!
                   </p>
 
                   <p>
@@ -104,7 +104,7 @@ export default function NinjaTrader() {
                 </div>
 
                 <div className="flex justify-center">
-                  <img
+                  <Image
                     src="/media-kit/Kinetick.png"
                     alt="Kinetick Logo"
                     width={400}

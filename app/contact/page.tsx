@@ -28,7 +28,7 @@ export default function Contact() {
         } else {
           setMessage({ type: 'error', text: 'Failed to send message. Please try again.' });
         }
-      } catch (error) {
+      } catch {
         setMessage({ type: 'error', text: 'Failed to send message. Please try again.' });
       } finally {
         setIsSubmitting(false);
