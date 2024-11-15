@@ -6,10 +6,9 @@ export default function Home() {
     <main>
       {/* Hero Section with Background */}
       <div className="h-[600px] bg-[url('/trading-background.png')] bg-cover bg-center bg-no-repeat">
-        <div className="h-full bg-gradient-to-b from-black/70 to-black/50 flex items-center justify-center p-8 text-white">
-          <h1 className="text-6xl font-bold text-center">
-            Trade Smarter, Not Harder
-          </h1>
+        <div className="h-full bg-gradient-to-b from-black/70 to-black/50 flex flex-col items-center justify-center p-8 text-white">
+          <h1 className="text-6xl font-bold text-center relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:w-[100%] after:h-1 after:border-b-4 after:border-white">Decode Volume, Unlock Success</h1>
+          <p className="text-2xl mt-4">Navigate the Markets with Confidence</p>
         </div>
       </div>
 
@@ -30,7 +29,7 @@ export default function Home() {
             <Card className="bg-black/30 backdrop-blur-sm border border-white/10">
               <CardBody>
                 <h3 className="text-xl font-semibold text-primary mb-3">Dynamic Decision-Making</h3>
-                <p className="text-gray-300">Utilizes volume delta, trend-based analysis, and rate-of-change (RoC) on volume differentials to identify profitable opportunities and avoid risky trades.</p>
+                <p className="text-gray-300">Utilizes volume delta, trend-based analysis, and rate-of-change (RoC) on volume differentials to identify optimal opportunities and avoid risky trades.</p>
               </CardBody>
             </Card>
 
