@@ -39,8 +39,19 @@ export default function NavbarComponent() {
           className="sm:hidden text-white"
         />
         <NavbarBrand>
-          <Link href="/" className="font-bold text-inherit text-white text-xl md:text-2xl tracking-wide">
-            Trading Levels Algo
+          <Link href="/" className="font-bold text-xl md:text-2xl tracking-wider flex items-center gap-3 uppercase">
+            <div className="flex-shrink-0">
+              <img 
+                src="/logo.png" 
+                alt="Trading Levels Algo Logo" 
+                className="h-12 w-12 object-contain rounded-lg shadow-lg shadow-primary/20 transition-transform hover:scale-105"
+              />
+            </div>
+            <div className="flex-grow">
+              <span className="text-primary font-bold drop-shadow-sm">
+                Trading Levels Algo
+              </span>
+            </div>
           </Link>
         </NavbarBrand>
       </NavbarContent>

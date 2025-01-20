@@ -7,14 +7,25 @@ export default function Home() {
       {/* Hero Section with Background */}
       <div className="h-[600px] bg-[url('/trading-background.png')] bg-cover bg-center bg-no-repeat">
         <div className="h-full bg-gradient-to-b from-black/70 to-black/50 flex flex-col items-center justify-center p-8 text-white">
-          <h1 className="text-6xl font-bold text-center relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:w-[100%] after:h-1 after:border-b-4 after:border-white">Decode Volume, Unlock Success</h1>
-          <p className="text-2xl mt-4">Navigate the Markets with Confidence</p>
+          <h1 className="text-5xl font-bold text-center relative text-shadow-glow after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:w-[100%] after:h-1 after:border-b-4 after:border-white/70">
+            Automate Your Future
+          </h1>
+          <p className="text-2xl mt-4 text-shadow-soft">Navigate the Markets with Confidence</p>
         </div>
       </div>
 
       {/* Features Section */}
       <section className="bg-black text-white py-20">
         <div className="w-full max-w-7xl mx-auto px-8">
+          <h2 className="text-2xl md:text-4xl font-bold text-center mb-4 pb-2 border-b-2 border-primary">Introducing TradingLevelsAlgo</h2>
+          <Card className="bg-black/30 backdrop-blur-sm border border-white/10 mb-16">
+            <CardBody>
+              <p className="text-gray-300">
+                TradingLevelsAlgo is an advanced trading system engineered for NASDAQ futures (NQ/MNQ). The algorithm processes market structure to identify optimal entry and exit points. The system is designed to run fully automated, with dynamic risk management.
+              </p>
+            </CardBody>
+          </Card>
+
           <h2 className="text-2xl md:text-4xl font-bold text-center mb-4 pb-2 border-b-2 border-primary">Core Features</h2>
           
           <div className="grid md:grid-cols-2 gap-8 mb-16">
