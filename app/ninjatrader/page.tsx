@@ -28,9 +28,9 @@ export default function NinjaTrader() {
                 <CardBody>
                   <p className="font-bold">
                     <Link href="http://ninjatrader.com/" target="_blank" rel="noopener" className="text-primary hover:underline">
-                      Download NinjaTrader
+                      Download NinjaTrader 
                     </Link>
-                    &amp; receive immediate FREE access to:
+                     &amp; receive immediate FREE access to: 
                   </p>
 
                   <ul className="list-disc pl-6 mt-2">

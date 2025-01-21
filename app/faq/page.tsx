@@ -4,19 +4,15 @@ import { Card, CardBody } from "@nextui-org/react";
 const faqs = [
     {
       question: "What platform does this run on?",
-      answer: "The bot is specifically designed for trading NASDAQ futures (NQ/MNQ) and NinjaTrader 8. The bot is designed to run on NinjaTrader 8 and is not compatible with other platforms. For more information on Ninjatrader, check out our <a href='/ninjatrader' className='text-primary hover:underline'>NinjaTrader page</a>."
+      answer: "The bot is specifically designed for trading NASDAQ futures (NQ/MNQ) and NinjaTrader 8. Refer to  The bot is designed to run on NinjaTrader 8 and is not compatible with other platforms. For more information on Ninjatrader, check out our <a href='/ninjatrader' className='text-primary hover:underline'>NinjaTrader page</a>."
     },
     {
       question: "What are the requirements? Do I need a VPS?",
       answer: "You'll need a futures trading account which is compatible with NinjaTrader 8. We do not require a VPS, but it is recommended for optimal performance."
     },
     {
-      question: "Can I use this if I am new to trading?",
-      answer: "While the bot is automated, we recommend having basic knowledge of futures trading and market mechanics. We provide comprehensive documentation and support to help you get started, but understanding the basics will help you better monitor and optimize your trading."
-    },
-    {
       question: "Can I upgrade?",
-      answer: "Yes, we offer various subscription tiers with additional features and capabilities. This can be managed through the Whop dashboard."
+      answer: "Yes, there is the ability to upgrade your subscription. This can be managed through the Whop dashboard."
     },
     {
       question: "What are the licensing requirements?",
@@ -25,6 +21,10 @@ const faqs = [
     {
       question: "How do I setup? I paid, and I want to get started!",
       answer: "Refer to our get started guide <a href='/ninjatrader' className='text-primary hover:underline'>here</a>."
+    },
+    {
+      question: "What hours does the bot trade?",
+      answer: "The bot runs from roughly 9am EST to 4pm EST. It is designed to run unattended and will not trade outside of these hours."
     }
   ];
 
