@@ -2,7 +2,6 @@
 
 import { Accordion, AccordionItem, Card, CardBody } from '@nextui-org/react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Support() {
   return (
