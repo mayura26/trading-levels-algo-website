@@ -44,7 +44,9 @@ export default function Pricing() {
               </ul>
               <div className="mt-auto pt-6">
                 <p className="text-3xl font-bold text-center">$300<span className="text-lg">/mo</span></p>
-                <Button className="w-full mt-4" color="primary">Get Started</Button>
+                <Link href="https://whop.com/trading-levels-algo-basic/" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full mt-4" color="primary">Get Started</Button>
+                </Link>
               </div>
             </CardBody>
           </Card>
@@ -78,7 +80,9 @@ export default function Pricing() {
               </ul>
               <div className="mt-auto pt-6">
                 <p className="text-3xl font-bold text-center">$500<span className="text-lg">/mo</span></p>
-                <Button className="w-full mt-4" color="primary">Get Started</Button>
+                <Link href="https://whop.com/trading-levels-algo-standard/" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full mt-4" color="primary">Get Started</Button>
+                </Link>
               </div>
             </CardBody>
           </Card>
@@ -112,7 +116,9 @@ export default function Pricing() {
               </ul>
               <div className="mt-auto pt-6">
                 <p className="text-3xl font-bold text-center">$900<span className="text-lg">/mo</span></p>
-                <Button className="w-full mt-4" color="primary">Get Started</Button>
+                <Link href="https://whop.com/trading-levels-algo-premium/" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full mt-4" color="primary">Get Started</Button>
+                </Link>
               </div>
             </CardBody>
           </Card>

@@ -20,9 +20,11 @@ export default function NavbarComponent() {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'Pricing', href: '/pricing' },
-    { name: 'About', href: '/about' },
+    { name: 'Support', href: '/support' },
+    { name: 'FAQ', href: '/faq' },
     { name: 'NinjaTrader', href: '/ninjatrader' },
     { name: 'Contact', href: '/contact' },
+    { name: 'About', href: '/about' },
   ];
 
   return (
