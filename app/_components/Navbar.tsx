@@ -20,6 +20,7 @@ export default function NavbarComponent() {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'Pricing', href: '/pricing' },
+    { name: 'Downloads', href: '/downloads' },
     { name: 'Support', href: '/support' },
     { name: 'FAQ', href: '/faq' },
     { name: 'NinjaTrader', href: '/ninjatrader' },

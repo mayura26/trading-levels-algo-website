@@ -9,7 +9,7 @@ export default function Support() {
       <h1 className="text-2xl md:text-4xl font-bold text-center mb-4 pb-2 border-b-2 border-primary">
         Support & Setup Guide
       </h1>
-      
+
       <Accordion>
         <AccordionItem key="getting-started" title="Getting Started">
           <Accordion>
@@ -17,47 +17,50 @@ export default function Support() {
               <Card>
                 <CardBody>
                   <p className="mb-4">
-                    Trading Levels Algo works with any broker that supports NinjaTrader integration. However we recommend{' '}
+                    Trading Levels Algo is fully compatible with NinjaTrader-supported brokers. We recommend{' '}
                     <Link href="/ninjatrader" className="text-primary hover:underline">
                       NinjaTrader Brokerage
                     </Link>{' '}
-                    for their seamless platform integration, competitive pricing, and excellent customer service.
+                    for their robust platform integration, competitive rates, and reliable support.
                   </p>
                   <p>
-                    Visit our{' '}
+                    Learn more about our recommended platform and brokerage solution on our{' '}
                     <Link href="/ninjatrader" className="text-primary hover:underline">
                       NinjaTrader page
-                    </Link>{' '}
-                    to learn more about our recommended trading platform and brokerage solution.
+                    </Link>.
                   </p>
                 </CardBody>
               </Card>
             </AccordionItem>
             <AccordionItem key="installation" title="Installing NinjaTrader">
-              <p className="mb-4">
-                Get the latest installer from the NinjaTrader website (accessible once you log into your account).
-              </p>
-              <div className="mb-4">
-                <img
-                  src="/support/NTInstaller.png"
-                  alt="NinjaTrader Installer Screenshot"
-                  className="rounded-lg w-[600px] h-auto"
-                />
-              </div>
-              <p>
-                For any issues, please refer to the{' '}
-                <Link 
-                  href="https://support.ninjatrader.com/s/article/NinjaTrader-Desktop-Installation-Guide?language=en_US"
-                  className="text-primary hover:underline"
-                  target="_blank"
-                >
-                  NinjaTrader Desktop Installation Guide
-                </Link>
-              </p>
+              <Card>
+                <CardBody>
+                  <p className="mb-4">
+                    Download and install the latest version of NinjaTrader from your account dashboard.
+                  </p>
+                  <div className="mb-4">
+                    <img
+                      src="/support/NTInstaller.png"
+                      alt="NinjaTrader Installation Screen"
+                      className="rounded-lg w-[600px] h-auto"
+                    />
+                  </div>
+                  <p>
+                    For detailed installation instructions, consult the{' '}
+                    <Link
+                      href="https://support.ninjatrader.com/s/article/NinjaTrader-Desktop-Installation-Guide?language=en_US"
+                      className="text-primary hover:underline"
+                      target="_blank"
+                    >
+                      Official Installation Guide
+                    </Link>
+                  </p>
+                </CardBody>
+              </Card>
             </AccordionItem>
-            
+
             <AccordionItem key="broker" title="Connecting to Broker">
-              <Link 
+              <Link
                 href="https://support.ninjatrader.com/s/article/Connecting-to-Your-Account-NinjaTrader-Desktop?language=en_US"
                 className="text-primary hover:underline"
                 target="_blank"
@@ -72,13 +75,43 @@ export default function Support() {
                   <p className="mb-4">
                     Install the provided NinjaTrader plugin for TradingLevelsAlgo by following the official NinjaTrader guide:
                   </p>
-                  <Link 
+                  <Link
                     href="https://support.ninjatrader.com/s/article/How-Can-I-Import-Indicators-and-Strategies-into-NinjaTrader-Desktop?language=en_US"
                     className="text-primary hover:underline"
                     target="_blank"
                   >
                     How to Import Indicators and Strategies
                   </Link>
+                  <br></br>
+                  <p>
+                    The latest version of the plugin can be found on the <Link href="/downloads" className="text-primary hover:underline">downloads page.</Link>
+                  </p>
+                </CardBody>
+              </Card>
+            </AccordionItem>
+            <AccordionItem key="vps" title="VPS Setup (Optional)">
+              <Card>
+                <CardBody>
+                  <p className="mb-4">
+                    A Virtual Private Server (VPS) ensures uninterrupted 24/7 operation of your trading bot. While optional, it's highly recommended for optimal performance.
+                  </p>
+
+                  <h3 className="font-bold mb-2">Recommended Specifications:</h3>
+                  <ul className="list-disc pl-6 mb-4">
+                    <li>Windows Server 2019 or later</li>
+                    <li>Minimum 4GB RAM</li>
+                    <li>4 CPU cores</li>
+                    <li>80GB SSD storage</li>
+                    <li>Stable network connection</li>
+                  </ul>
+
+                  <p className="mb-4">
+                    Recommended VPS providers:
+                  </p>
+                  <ul className="list-disc pl-6">
+                    <li><Link href="https://www.ovh.com" className="text-primary hover:underline" target="_blank">OVH Cloud</Link></li>
+                    <li><Link href="https://ninjamobiletrader.com/" className="text-primary hover:underline" target="_blank">NinjaMobileTrader</Link></li>
+                  </ul>
                 </CardBody>
               </Card>
             </AccordionItem>
@@ -87,28 +120,68 @@ export default function Support() {
 
         <AccordionItem key="configuration" title="Configuration">
           <Accordion>
-            <AccordionItem key="charts" title="Setup Charts">
+            <AccordionItem key="charts" title="Chart Configuration">
               <Card>
                 <CardBody>
                   <p className="mb-4">
-                    Either use the existing base chart provided with NT or create a new chart. The only settings you need to change are the data series settings.
-                  </p>
-                  <p className="mb-4">
-                    Key values to note:
+                    Configure your chart with these settings:
                   </p>
                   <ul className="list-disc pl-6 mb-4">
-                    <li>3-minute timeframe</li>
-                    <li>Load 20 days of past data</li>
-                    <li>Select MNQ (latest contract)</li>
+                    <li>Time interval: 3 minutes</li>
+                    <li>Historical data: 20 days</li>
+                    <li>Instrument: MNQ (current contract)</li>
                   </ul>
+                  <div className="mb-4">
+                    <img
+                      src="/support/ChartSettings.png"
+                      alt="Chart Settings Configuration"
+                      className="rounded-lg shadow-lg w-full max-h-[600px] object-contain object-left"
+                    />
+                  </div>
+                  <div>
+                    <p className="mb-4">Make sure to save the chart at the end of the setup process.</p>
+                    <img
+                      src="/support/SaveChart.png"
+                      alt="Save Chart Instructions" 
+                      className="rounded-lg shadow-lg w-full max-h-[150px] object-contain object-left"
+                    />
+                  </div>
+                  <div className="mt-4">
+                    <p className="mb-4">Watch our data series tutorial for more information:</p>
+                    <div className="relative w-full aspect-video">
+                      <iframe
+                        className="absolute top-0 left-0 w-full h-full rounded-lg"
+                        src="https://www.youtube.com/embed/P5lHZv7dy4E"
+                        title="License Activation Tutorial"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  </div>
                 </CardBody>
               </Card>
             </AccordionItem>
-            <AccordionItem key="license" title="Adding License">
+            <AccordionItem key="license" title="License Activation">
               <Card>
                 <CardBody>
                   <p className="mb-4">
-                    The license is managed remotely and requires your NT machine ID. This can be found in the About page of NinjaTrader. Once you provide your machine ID, we will activate your license.
+                    To activate your license:
+                  </p>
+                  <ol className="list-decimal pl-6 mb-4">
+                    <li>Locate your Machine ID in NinjaTrader's About section</li>
+                    <div className="mb-4">
+                      <img
+                        src="/support/MachineID.png"
+                        alt="Machine ID Location"
+                        className="rounded-lg shadow-lg w-full max-h-[200px] object-contain object-left"
+                      />
+                    </div>
+                    <li>Complete the <Link href="https://form.jotform.com/250198234704254" className="text-primary hover:underline" target="_blank">license agreement form</Link></li>
+                    <li>Ensure your details match your Whop payment information</li>
+                    <li>Wait for license activation (typically within 24 hours)</li>
+                  </ol>
+                  <p>
+                    Contact support if your license isn't activated within 24 hours. The bot will provide a notification is the license is not active.
                   </p>
                 </CardBody>
               </Card>
@@ -124,6 +197,7 @@ export default function Support() {
                     <li>Click on "Strategies"</li>
                     <li>Double click on "TradingLevelsAlgo"</li>
                   </ol>
+                  <p>Refer to <Link href="https://ninjatrader.com/support/helpguides/nt8/NT%20HelpGuide%20English.html?running_a_ninjascript_strategy.htm" className="text-primary hover:underline" target="_blank">NinjaTrader Help Guide</Link> for more information.</p>
                 </CardBody>
               </Card>
             </AccordionItem>
@@ -138,8 +212,18 @@ export default function Support() {
                     <li>Number of contracts</li>
                     <li>Optional: Max loss and max gain limits</li>
                   </ul>
+                  <div className="mb-4">
+                    <img
+                      src="/support/StrategySettings.png"
+                      alt="Strategy Settings Panel"
+                      className="rounded-lg shadow-lg w-full max-h-[600px] object-contain object-left"
+                    />
+                  </div>
                   <p className="mb-4">
                     Other settings are primarily for backtesting and optimization purposes. While advanced users may find situations where adjusting these settings is advantageous, we recommend keeping the default values.
+                  </p>
+                  <p>
+                    Do not change any of the NinjaTrader strategy settings.
                   </p>
                 </CardBody>
               </Card>
@@ -149,19 +233,27 @@ export default function Support() {
 
         <AccordionItem key="operation" title="Operation & Maintenance">
           <Accordion>
-            <AccordionItem key="trading" title="Trading">
+            <AccordionItem key="trading" title="Trading Operations">
               <Card>
                 <CardBody>
                   <p className="mb-4">
-                    To start trading:
+                    Operating instructions:
                   </p>
                   <ol className="list-decimal pl-6 mb-4">
-                    <li>Enable the bot in the strategy tab (indicator should turn green)</li>
-                    <li>The dashboard will display the bot's status</li>
-                    <li>Note: PnL display may not be perfect due to NT's calculations, especially if the bot is restarted during the day</li>
+                    <li>Enable the strategy in the strategy panel (status indicator will turn green)</li>
+                    <li>Monitor the dashboard for real-time status updates</li>
+                    <li>Trading hours: 9:00 AM - 4:00 PM EST</li>
                   </ol>
-                  <p className="mb-4">
-                    The bot operates from 9am – 4pm EST with specific time and day filters.
+                  <div className="mb-4">
+                    <img
+                      src="/support/EnableStrategy.png"
+                      alt="Enable Strategy Panel"
+                      className="rounded-lg shadow-lg w-full object-contain object-left"
+                    />
+                  </div>
+                  <p className="text-sm text-gray-600">
+                    Note: Profit/Loss calculations may vary slightly due to NinjaTrader's internal calculations,
+                    especially after mid-day restarts.
                   </p>
                 </CardBody>
               </Card>
@@ -177,7 +269,7 @@ export default function Support() {
                     <li>Apply similar logic to loss limits</li>
                     <li>When limits are hit, NT automatically liquidates your account until end of trading day</li>
                   </ul>
-                  <Link 
+                  <Link
                     href="https://support.ninjatrader.com/s/article/Risk-Settings?language=en_US"
                     className="text-primary hover:underline"
                     target="_blank"
@@ -194,6 +286,13 @@ export default function Support() {
                   <p className="mb-4">
                     If you receive a stop loss rejection error, it means the bot attempted to place a stop loss above market price. While rare, this can occur due to broker delays.
                   </p>
+                  <div className="mb-4">
+                    <img
+                      src="/support/StopLossError.png"
+                      alt="Stop Loss Error Message"
+                      className="rounded-lg shadow-lg w-full max-h-[200px] object-contain object-left"
+                    />
+                  </div>
                   <p className="mb-4">
                     Resolution steps:
                   </p>
@@ -204,6 +303,13 @@ export default function Support() {
                   </ol>
 
                   <h3 className="font-bold mb-2 mt-4">Broker Connection Timeout</h3>
+                  <div className="mb-4">
+                    <img
+                      src="/support/CloseFailed.png"
+                      alt="Close Failed Error Message"
+                      className="rounded-lg shadow-lg w-full max-h-[200px] object-contain object-left"
+                    />
+                  </div>
                   <p className="mb-4">
                     If broker connection drops:
                   </p>
@@ -211,7 +317,7 @@ export default function Support() {
                     <li>Reconnect to the broker immediately</li>
                     <li>Verify all open positions are closed</li>
                   </ol>
-                  <Link 
+                  <Link
                     href="https://support.ninjatrader.com/s/article/Close-operation-failed-to-manually-close-your-position?language=en_US"
                     className="text-primary hover:underline"
                     target="_blank"
