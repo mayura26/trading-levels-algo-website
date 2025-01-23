@@ -11,7 +11,7 @@ const faqs = [
       answer: "You'll need a futures trading account which is compatible with NinjaTrader 8. We do not require a VPS, but it is recommended for optimal performance."
     },
     {
-      question: "Can I upgrade?",
+      question: "Can I upgrade between plans?",
       answer: "Yes, there is the ability to upgrade your subscription. This can be managed through the Whop dashboard."
     },
     {
@@ -24,7 +24,11 @@ const faqs = [
     },
     {
       question: "What hours does the bot trade?",
-      answer: "The bot runs from roughly 9am EST to 4pm EST. It is designed to run unattended and will not trade outside of these hours."
+      answer: "The bot runs from roughly 9am EST to 4pm EST. It is designed to run unattended and will not trade outside of these hours. The bot also uses special filters for news days. The bot can trade half days, but it is not recommended."
+    },
+    {
+      question: "How long does it take to setup?",
+      answer: "The setup process is relatively quick. Taking about 20-30 minutes including NinjaTrader setup. It can take up to a day to receive your license key, as the process is done manually."
     }
   ];
 

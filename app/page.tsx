@@ -59,6 +59,20 @@ export default function Home() {
             </Card>
           </div>
         </div>
+        <div className="w-full max-w-7xl mx-auto px-8">
+          <h2 className="text-2xl md:text-4xl font-bold text-center mb-12 pb-2 border-b-2 border-primary">
+            Watch it in Action
+          </h2>
+          <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+            <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/LBXzQIb1nW0"
+              title="TradingLevelsAlgo Demo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
       </section>
     </main>
   );

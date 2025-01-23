@@ -117,6 +117,28 @@ export default function Support() {
             </AccordionItem>
           </Accordion>
         </AccordionItem>
+            <AccordionItem key="upgrades" title="Upgrading Your Software">
+              <Card>
+                <CardBody>
+                  <p className="mb-4">
+                    Monthly software updates will be distributed through this website, with announcements posted on Whop.
+                  </p>
+                  <p className="mb-4">
+                    To upgrade your software:
+                  </p>
+                  <ol className="list-decimal pl-6 mb-4">
+                    <li>Remove the previous version following the <Link 
+                      href="https://ninjatrader.com/support/helpguides/nt8/NT%20HelpGuide%20English.html?remove-ninjascript-assembly.htm"
+                      className="text-primary hover:underline"
+                      target="_blank"
+                    >
+                      NinjaTrader removal guide
+                    </Link></li>
+                    <li>Install the new version using the same process as the initial installation</li>
+                  </ol>
+                </CardBody>
+              </Card>
+            </AccordionItem>
 
         <AccordionItem key="configuration" title="Configuration">
           <Accordion>
