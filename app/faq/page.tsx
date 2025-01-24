@@ -29,6 +29,10 @@ const faqs = [
     {
       question: "How long does it take to setup?",
       answer: "The setup process is relatively quick. Taking about 20-30 minutes including NinjaTrader setup. It can take up to a day to receive your license key, as the process is done manually."
+    },
+    {
+      question: "I am new to futures trading. What are contracts and what is my risk?",
+      answer: "This bot trades NASDAQ futures using micro contracts (MNQ) by default. Each contract represents $2 per point movement in the NASDAQ. Typically, each trade risks about $30-40 to potentially make $30-80. For risk management, we recommend having $350-800 in equity per contract traded. A simple way to think about the risk is a maximum potential loss of $100 per contract per day versus a potential gain of $100 per day."
     }
   ];
 
