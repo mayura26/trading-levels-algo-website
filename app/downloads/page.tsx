@@ -11,17 +11,17 @@ const packages: PackageDownload[] = [
   {
     name: 'Basic Package',
     version: '5.0.0',
-    downloadUrl: '/downloads/basic-package.zip'
+    downloadUrl: '/downloads/TLABasic_v5.0.zip'
   },
   {
     name: 'Standard Package',
     version: '5.0.0',
-    downloadUrl: '/downloads/standard-package.zip'
+    downloadUrl: '/downloads/TLAStandard_v5.0.zip'
   },
   {
     name: 'Premium Package',
     version: '5.0.0',
-    downloadUrl: '/downloads/premium-package.zip'
+    downloadUrl: '/downloads/TLAPremium_v5.0.zip'
   }
 ];
 
