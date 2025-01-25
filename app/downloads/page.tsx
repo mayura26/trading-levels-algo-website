@@ -28,22 +28,31 @@ const packages: PackageDownload[] = [
 const DownloadsPage: FC = () => {
   return (
     <div className="max-w-7xl mx-auto py-12 px-4">
-      <h1 className="text-4xl font-bold text-center mb-12">Downloads</h1>
+      <h1 className="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
+        Downloads
+      </h1>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {packages.map((pkg) => (
-          <Card key={pkg.name} className="p-4">
-            <CardHeader className="flex-col items-start gap-2">
-              <h2 className="text-2xl font-bold">{pkg.name}</h2>
-              <p className="text-default-500">Version: {pkg.version}</p>
+          <Card 
+            key={pkg.name} 
+            className="bg-white/70 dark:bg-black/30 backdrop-blur-sm border border-gray-200 dark:border-white/10"
+          >
+            <CardHeader className="flex-col items-start gap-2 px-6 pt-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                {pkg.name}
+              </h2>
+              <p className="text-gray-600 dark:text-gray-400">
+                Version: {pkg.version}
+              </p>
             </CardHeader>
-            <CardBody className="py-2">
+            <CardBody className="py-4 px-6">
               <Button
                 as={Link}
                 href={pkg.downloadUrl}
                 color="primary"
                 variant="solid"
-                className="w-full"
+                className="w-full font-semibold shadow-lg hover:shadow-primary/25 transition-shadow"
               >
                 Download
               </Button>

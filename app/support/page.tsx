@@ -6,50 +6,50 @@ import Link from 'next/link';
 export default function Support() {
   return (
     <div className="max-w-[1200px] mx-auto px-4 py-8">
-      <h1 className="text-2xl md:text-4xl font-bold text-center mb-4 pb-2 border-b-2 border-primary">
+      <h1 className="text-2xl md:text-4xl font-bold text-center mb-4 pb-2 border-b-2 border-primary text-gray-900 dark:text-white">
         Support & Setup Guide
       </h1>
 
       <Accordion>
-        <AccordionItem key="getting-started" title="Getting Started">
+        <AccordionItem key="getting-started" title="Getting Started" className="text-gray-900 dark:text-white">
           <Accordion>
-            <AccordionItem key="brokers" title="Compatible Brokers">
-              <Card>
+            <AccordionItem key="brokers" title="Compatible Brokers" className="text-gray-900 dark:text-white">
+              <Card className="bg-white/70 dark:bg-black/30 backdrop-blur-sm border border-gray-200 dark:border-white/10">
                 <CardBody>
-                  <p className="mb-4">
+                  <p className="mb-4 text-gray-700 dark:text-gray-300">
                     Trading Levels Algo is fully compatible with NinjaTrader-supported brokers. We recommend{' '}
-                    <Link href="/ninjatrader" className="text-primary hover:underline">
+                    <Link href="/ninjatrader" className="text-primary hover:text-primary/80 hover:underline">
                       NinjaTrader Brokerage
                     </Link>{' '}
                     for their robust platform integration, competitive rates, and reliable support.
                   </p>
-                  <p>
+                  <p className="text-gray-700 dark:text-gray-300">
                     Learn more about our recommended platform and brokerage solution on our{' '}
-                    <Link href="/ninjatrader" className="text-primary hover:underline">
+                    <Link href="/ninjatrader" className="text-primary hover:text-primary/80 hover:underline">
                       NinjaTrader page
                     </Link>.
                   </p>
                 </CardBody>
               </Card>
             </AccordionItem>
-            <AccordionItem key="installation" title="Installing NinjaTrader">
-              <Card>
+            <AccordionItem key="installation" title="Installing NinjaTrader" className="text-gray-900 dark:text-white">
+              <Card className="bg-white/70 dark:bg-black/30 backdrop-blur-sm border border-gray-200 dark:border-white/10">
                 <CardBody>
-                  <p className="mb-4">
+                  <p className="mb-4 text-gray-700 dark:text-gray-300">
                     Download and install the latest version of NinjaTrader from your account dashboard.
                   </p>
                   <div className="mb-4">
                     <img
                       src="/support/NTInstaller.png"
                       alt="NinjaTrader Installation Screen"
-                      className="rounded-lg w-[600px] h-auto"
+                      className="rounded-lg w-[600px] h-auto shadow-lg dark:shadow-black/30"
                     />
                   </div>
-                  <p>
+                  <p className="text-gray-700 dark:text-gray-300">
                     For detailed installation instructions, consult the{' '}
                     <Link
                       href="https://support.ninjatrader.com/s/article/NinjaTrader-Desktop-Installation-Guide?language=en_US"
-                      className="text-primary hover:underline"
+                      className="text-primary hover:text-primary/80 hover:underline"
                       target="_blank"
                     >
                       Official Installation Guide

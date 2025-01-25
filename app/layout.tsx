@@ -5,6 +5,7 @@ import Navbar from '@/app/_components/Navbar';
 import { NextUIProvider } from "@nextui-org/react";
 import Footer from '@/app/_components/Footer';
 import GoogleAnalytics from '@/app/_components/GoogleAnalytics';
+import { ThemeProvider } from "next-themes";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -38,13 +39,19 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
-        <NextUIProvider>
-          <Navbar />
-          <div className="flex-grow">
-            {children}
-          </div>
-          <Footer />
-        </NextUIProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem={true}
+        >
+          <NextUIProvider>
+            <Navbar />
+            <div className="flex-grow">
+              {children}
+            </div>
+            <Footer />
+          </NextUIProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

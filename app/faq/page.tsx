@@ -40,18 +40,18 @@ const faqs = [
 const Answer = ({ content }: { content: string }) => {
   // If the answer doesn't contain HTML, return it as plain text
   if (!content.includes('<a')) {
-    return <p className="text-gray-300">{content}</p>;
+    return <p className="text-gray-700 dark:text-gray-300">{content}</p>;
   }
   
   // Add link styling classes
   const styledContent = content.replace(
     /<a\s+href='([^']+)'[^>]*>/g,
-    "<a href='$1' class='text-primary hover:text-primary/80 underline transition-colors'>"
+    "<a href='$1' class='text-primary hover:text-primary/80 hover:underline transition-colors'>"
   );
   
   return (
     <p 
-      className="text-gray-300"
+      className="text-gray-700 dark:text-gray-300"
       dangerouslySetInnerHTML={{ __html: styledContent }}
     />
   );
@@ -61,7 +61,7 @@ export default function FAQPage() {
   return (
     <main className="min-h-screen">
       {/* FAQ Section */}
-      <section className="bg-black text-white py-20">
+      <section className="bg-gray-50 dark:bg-black text-gray-900 dark:text-white py-20">
         <div className="w-full max-w-7xl mx-auto px-8">
           <h2 className="text-2xl md:text-4xl font-bold text-center mb-12 pb-2 border-b-2 border-primary">
             Frequently Asked Questions
@@ -70,15 +70,7 @@ export default function FAQPage() {
             {faqs.map((faq, index) => (
               <Card 
                 key={index} 
-                classNames={{
-                  base: [
-                    "border-none",
-                    "bg-content1/50",
-                    "dark:bg-default-100/50",
-                    "backdrop-blur-lg",
-                    "backdrop-saturate-150"
-                  ].join(" ")
-                }}
+                className="bg-white/70 dark:bg-black/30 backdrop-blur-sm border border-gray-200 dark:border-white/10"
               >
                 <CardBody>
                   <h3 className="text-xl font-semibold text-primary mb-2">
