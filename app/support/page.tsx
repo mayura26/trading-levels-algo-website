@@ -169,7 +169,7 @@ export default function Support() {
                       First, create a new workspace for TradingLevelsAlgo:
                     </p>
                     <ol className="list-decimal pl-6 mb-4">
-                      <li>Click Workspaces > new</li>
+                      <li>Click Workspaces {`>`} new</li>
                       <li>Name it as you wish, e.g. &quot;TradingLevelsAlgo&quot;</li>
                       <li>Click OK to create the workspace</li>
                     </ol>
