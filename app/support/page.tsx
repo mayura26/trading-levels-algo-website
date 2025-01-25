@@ -32,6 +32,25 @@ export default function Support() {
                 </CardBody>
               </Card>
             </AccordionItem>
+            <AccordionItem key="data-packages" title="Required Data Packages" className="text-gray-900 dark:text-white">
+              <Card className="bg-white/70 dark:bg-black/30 backdrop-blur-sm border border-gray-200 dark:border-white/10">
+                <CardBody>
+                  <p className="mb-4 text-gray-700 dark:text-gray-300">
+                    TradingLevelsAlgo requires CME Level 1 market data for operation. This data package provides real-time quotes for the CME exchange, which includes the NASDAQ.
+                  </p>
+                  <div className="mb-4">
+                    <img
+                      src="/support/CMEData.png"
+                      alt="CME Data Package Selection"
+                      className="rounded-lg w-[600px] h-auto shadow-lg dark:shadow-black/30"
+                    />
+                  </div>
+                  <p className="text-gray-700 dark:text-gray-300">
+                    You can subscribe to CME Level 1 data through your NinjaTrader account. Make sure this package is active before running the bot.
+                  </p>
+                </CardBody>
+              </Card>
+            </AccordionItem>
             <AccordionItem key="installation" title="Installing NinjaTrader" className="text-gray-900 dark:text-white">
               <Card className="bg-white/70 dark:bg-black/30 backdrop-blur-sm border border-gray-200 dark:border-white/10">
                 <CardBody>
@@ -117,41 +136,57 @@ export default function Support() {
             </AccordionItem>
           </Accordion>
         </AccordionItem>
-            <AccordionItem key="upgrades" title="Upgrading Your Software">
-              <Card>
-                <CardBody>
-                  <p className="mb-4">
-                    Monthly software updates will be distributed through this website, with announcements posted on Whop.
-                  </p>
-                  <p className="mb-4">
-                    To upgrade your software:
-                  </p>
-                  <ol className="list-decimal pl-6 mb-4">
-                    <li>Remove the previous version following the <Link 
-                      href="https://ninjatrader.com/support/helpguides/nt8/NT%20HelpGuide%20English.html?remove-ninjascript-assembly.htm"
-                      className="text-primary hover:underline"
-                      target="_blank"
-                    >
-                      NinjaTrader removal guide
-                    </Link></li>
-                    <li>Install the new version using the same process as the initial installation</li>
-                  </ol>
-                </CardBody>
-              </Card>
-            </AccordionItem>
+        <AccordionItem key="upgrades" title="Upgrading Your Software">
+          <Card>
+            <CardBody>
+              <p className="mb-4">
+                Monthly software updates will be distributed through this website, with announcements posted on Whop.
+              </p>
+              <p className="mb-4">
+                To upgrade your software:
+              </p>
+              <ol className="list-decimal pl-6 mb-4">
+                <li>Remove the previous version following the <Link
+                  href="https://ninjatrader.com/support/helpguides/nt8/NT%20HelpGuide%20English.html?remove-ninjascript-assembly.htm"
+                  className="text-primary hover:underline"
+                  target="_blank"
+                >
+                  NinjaTrader removal guide
+                </Link></li>
+                <li>Install the new version using the same process as the initial installation</li>
+              </ol>
+            </CardBody>
+          </Card>
+        </AccordionItem>
 
         <AccordionItem key="configuration" title="Configuration">
           <Accordion>
             <AccordionItem key="charts" title="Chart Configuration">
               <Card>
                 <CardBody>
+                  <div>
+                    <p className="mb-4">
+                      First, create a new workspace for TradingLevelsAlgo:
+                    </p>
+                    <ol className="list-decimal pl-6 mb-4">
+                      <li>Click Workspaces > new</li>
+                      <li>Name it as you wish, e.g. &quot;TradingLevelsAlgo&quot;</li>
+                      <li>Click OK to create the workspace</li>
+                    </ol>
+                    <img
+                      src="/support/SaveChart.png"
+                      alt="Save Chart Instructions"
+                      className="rounded-lg shadow-lg w-full max-h-[150px] object-contain object-left"
+                    />
+                  </div>
+                  <br></br>
                   <p className="mb-4">
                     Configure your chart with these settings:
                   </p>
                   <ul className="list-disc pl-6 mb-4">
                     <li>Time interval: 3 minutes</li>
                     <li>Historical data: 20 days</li>
-                    <li>Instrument: MNQ (current contract)</li>
+                    <li>Instrument: MNQ (current contract) <span className="text-sm italic text-gray-600 dark:text-gray-400">(Pro tip: You can type in this bar to search)</span></li>
                   </ul>
                   <div className="mb-4">
                     <img
@@ -164,12 +199,12 @@ export default function Support() {
                     <p className="mb-4">Make sure to save the chart at the end of the setup process.</p>
                     <img
                       src="/support/SaveChart.png"
-                      alt="Save Chart Instructions" 
+                      alt="Save Chart Instructions"
                       className="rounded-lg shadow-lg w-full max-h-[150px] object-contain object-left"
                     />
                   </div>
                   <div className="mt-4">
-                    <p className="mb-4">Watch our data series tutorial for more information:</p>
+                    <p className="mb-4">Watch our data series tutorial for more information (no audio):</p>
                     <div className="relative w-full aspect-video">
                       <iframe
                         className="absolute top-0 left-0 w-full h-full rounded-lg"
@@ -190,20 +225,36 @@ export default function Support() {
                     To activate your license:
                   </p>
                   <ol className="list-decimal pl-6 mb-4">
-                    <li>Locate your Machine ID in NinjaTrader's About section</li>
-                    <div className="mb-4">
-                      <img
-                        src="/support/MachineID.png"
-                        alt="Machine ID Location"
-                        className="rounded-lg shadow-lg w-full max-h-[200px] object-contain object-left"
-                      />
-                    </div>
+                    <li>Open the 3rd Party Licenses window in NinjaTrader under the Help menu</li>
+                    <li>Enter the following information:
+                      <ul className="list-disc pl-6 mt-2">
+                        <li>Vendor Name: TradingLevelsAlgo</li>
+                        <li>User defined ID: Your first name</li>
+                      </ul>
+                    </li>
+                    <li>Click the Submit button</li>
+                  </ol>
+
+                  <div className="mb-4">
+                    <img
+                      src="/support/3rdPartyLicense.png"
+                      alt="3rd Party Licenses Window"
+                      className="rounded-lg shadow-lg w-full max-h-[200px] object-contain object-left"
+                    />
+                  </div>
+
+                  <p className="mb-4 text-gray-600 dark:text-gray-400">
+                    Note: You can use any name as your User defined ID, but make sure it matches the first name you provide in the contract form below, to speed up license activation.
+                  </p>
+
+                  <ol className="list-decimal pl-6 mb-4" start={4}>
                     <li>Complete the <Link href="https://form.jotform.com/250198234704254" className="text-primary hover:underline" target="_blank">license agreement form</Link></li>
                     <li>Ensure your details match your Whop payment information</li>
                     <li>Wait for license activation (typically within 24 hours)</li>
                   </ol>
-                  <p>
-                    Contact support if your license isn't activated within 24 hours. The bot will provide a notification is the license is not active.
+
+                  <p className="text-gray-700 dark:text-gray-300">
+                    Contact support if your license isn't activated within 24 hours. The bot will display a notification if the license is not active.
                   </p>
                 </CardBody>
               </Card>
@@ -262,15 +313,42 @@ export default function Support() {
                     Operating instructions:
                   </p>
                   <ol className="list-decimal pl-6 mb-4">
-                    <li>Enable the strategy in the strategy panel (status indicator will turn green)</li>
+                    <li>Make sure the "Strategies" tab is selected in the strategy panel</li>
+                    <li>Enable the strategy in the strategy panel (Text under the strategy name will turn green)</li>
                     <li>Monitor the dashboard for real-time status updates</li>
-                    <li>Trading hours: 9:00 AM - 4:00 PM EST</li>
+                    <li>Trading hours: 8:40 AM - 4:00 PM EST</li>
                   </ol>
+                  <p className="mb-4 text-gray-700 dark:text-gray-300">
+                    The bot operates on Eastern Time (EST). While it has built-in timezone conversion capabilities allowing you to run Windows in your local timezone, we recommend setting your system to EST for optimal operation and easier monitoring.
+                  </p>
                   <div className="mb-4">
                     <img
                       src="/support/EnableStrategy.png"
                       alt="Enable Strategy Panel"
                       className="rounded-lg shadow-lg w-full object-contain object-left"
+                    />
+                  </div>
+                </CardBody>
+              </Card>
+            </AccordionItem>
+            <AccordionItem key="dashboard" title="Dashboard Panel">
+              <Card>
+                <CardBody>
+                  <p className="mb-4">
+                    The dashboard panel appears in the bottom right corner of your chart and provides real-time information about the bot's status:
+                  </p>
+                  <ul className="list-disc pl-6 mb-4">
+                    <li>Daily P/L: Running profit/loss for the current session (PnL per contract shown in brackets)</li>
+                    <li>TDD: Total daily drawdown</li>
+                    <li>Trading Status: Shows if trading is active or off</li>
+                    <li>Trade Data: Displays metrics like bars missed and trade duration</li>
+                    <li>Triggers: Lists any currently active trading triggers</li>
+                  </ul>
+                  <div className="mb-4">
+                    <img
+                      src="/support/Dashboard.png"
+                      alt="Dashboard Panel"
+                      className="rounded-lg shadow-lg w-full max-h-[400px] object-contain object-left"
                     />
                   </div>
                   <p className="text-sm text-gray-600">
@@ -280,7 +358,64 @@ export default function Support() {
                 </CardBody>
               </Card>
             </AccordionItem>
-            <AccordionItem key="risk" title="Setting Daily Gain/Loss Limits">
+            <AccordionItem key="parameters" title="Adjusting Parameters">
+              <Card className="bg-white/70 dark:bg-black/30 backdrop-blur-sm border border-gray-200 dark:border-white/10">
+                <CardBody>
+                  <div className="bg-red-50 dark:bg-red-900/30 p-4 rounded-lg mb-4">
+                    <p className="text-sm text-red-800 dark:text-red-200">
+                      <strong>Warning:</strong> Parameter adjustments should only be made by experienced traders who fully understand their impact. Incorrect settings can significantly increase risk and affect performance. If unsure, keep the default values apart from contract size/risk management.
+                    </p>
+                  </div>
+                  <h3 className="text-lg font-semibold text-primary mb-2">Position Sizing</h3>
+                  <ul className="list-disc pl-6 mb-4 text-gray-700 dark:text-gray-300">
+                    <li>TradeQuantityBase Set the number of contracts per trade (default: 5)</li>
+                  </ul>
+
+                  <h3 className="text-lg font-semibold text-primary mb-2">Risk Management</h3>
+                  <ul className="list-disc pl-6 mb-4 text-gray-700 dark:text-gray-300">
+                    <li>MaxGainRatio: Set your daily profit target per contract (default: $100)</li>
+                    <li className="ml-4 text-gray-700 dark:text-gray-300">
+                      Risk Levels:
+                      <ul className="list-disc pl-6">
+                        <li>75-80: Conservative</li>
+                        <li>90: Slightly risky</li>
+                        <li>100: Risky</li>
+                        <li>120: Extremely risky</li>
+                      </ul>
+                    </li>
+                    <li>MaxLossRatio: Set your maximum daily loss limit per contract (recommended: $100)</li>
+                  </ul>
+
+                  <h3 className="text-lg font-semibold text-primary mb-2">Time Settings</h3>
+                  <ul className="list-disc pl-6 mb-4 text-gray-700 dark:text-gray-300">
+                    <li>Trading Hours across sessions split as morning and day.</li>
+                    <li>You can adjust this if you want the bot to start earlier or end earlier. Its important to make sure the end of the morning session and start of the day session remains as 10am and 4pm respectively.</li>
+                  </ul>
+
+                  <h3 className="text-lg font-semibold text-primary mb-2">Trade Management</h3>
+                  <ul className="list-disc pl-6 mb-4 text-gray-700 dark:text-gray-300">
+                    <li>Chase TP: This is the Take Profit for chase trades, which are trades when the bot is chasing a move. You can use 35/40 during risky trading periods to allow the bot to more safely close out a chase trade rather than let the trade get retraced.</li>
+                    <li>Time Session 1/2: These are the Take Profit settings for the time sessions defined above. The TP can be adjusted down if you think the bot isn't closing out trades before moves retrace. We recommend setting them to 55/45 respectively for the two sessions, during periods of poor price action.</li>
+                    <li>Stop Loss: We recommend keeping the default Stop Loss settings for optimal performance.</li>
+                  </ul>
+
+                  <div className="mb-4">
+                    <img
+                      src="/support/Parameters.png"
+                      alt="Bot Parameters Panel"
+                      className="rounded-lg shadow-lg w-full max-h-[600px] object-contain object-left"
+                    />
+                  </div>
+
+                  <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg">
+                    <p className="text-sm text-blue-800 dark:text-blue-200">
+                      <strong>Pro Tip:</strong> For the best performance, always talk to the developer before making any changes.
+                    </p>
+                  </div>
+                </CardBody>
+              </Card>
+            </AccordionItem>
+            <AccordionItem key="risk" title="Setting Daily Gain/Loss Limits (Broker)">
               <Card>
                 <CardBody>
                   <p className="mb-4">
