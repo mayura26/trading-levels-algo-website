@@ -33,6 +33,10 @@ const faqs = [
     {
       question: "I am new to futures trading. What are contracts and what is my risk?",
       answer: "This bot trades NASDAQ futures using micro contracts (MNQ) by default. Each contract represents $2 per point movement in the NASDAQ. Typically, each trade risks about $30-40 to potentially make $30-80. For risk management, we recommend having $350-800 in equity per contract traded. A simple way to think about the risk is a maximum potential loss of $100 per contract per day versus a potential gain of $100 per day."
+    },
+    {
+      question: "Can this bot be run on prop firms?",
+      answer: "Yes, the bot is designed to be compatible with prop firms. This bot uses low frequency trading method which trades the same as a normal trader placing trades with brackets. It is up to the user to verify that the specific prop firm supports bots."
     }
   ];
 
