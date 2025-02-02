@@ -154,6 +154,7 @@ export default function Support() {
                   NinjaTrader removal guide
                 </Link></li>
                 <li>Install the new version using the same process as the initial installation</li>
+                <li>Restart your NinjaTrader & re-add the strategy to ensure all the parameters have been updated.</li>
               </ol>
             </CardBody>
           </Card>
@@ -358,14 +359,48 @@ export default function Support() {
                 </CardBody>
               </Card>
             </AccordionItem>
+            <AccordionItem key="dynamic-risk" title="Dynamic Risk System">
+              <Card>
+                <CardBody>
+                  <p className="mb-4">
+                    The Dynamic Risk System automatically adjusts trading parameters based on central management server settings:
+                  </p>
+                  <ul className="list-disc pl-6 mb-4">
+                    <li><strong>Low Risk Mode:</strong> Focused for protecting gains, and locking in profits. Will stop trading in any market conditions consider non optimal. Ideal for those looking for steady gains.</li>
+                    <li><strong>Medium Risk Mode:</strong> Will look to trade in most market conditions and push for larger gains where possible. Ideal for those looking for a balanced approach, with a bit more risk.</li>
+                    <li><strong>High Risk Mode:</strong> Very little intervention unless market conditions are extremely volatile. Settings will push for maximising gains, at the risk of giving away profits.Ideal for those looking for maximum gains, but willing to risk equity.</li>
+                  </ul>
+                  <div className="mb-4">
+                    <img
+                      src="/support/DynamicRisk.png"
+                      alt="Dynamic Risk System Panel"
+                      className="rounded-lg shadow-lg w-full max-h-[400px] object-contain object-left"
+                    />
+                  </div>
+                  <p className="mb-4">
+                    The Dynamic Risk System will override several key parameters when enabled:
+                  </p>
+                  <ul className="list-disc pl-6 mb-4">
+                    <li>Contract Sizing</li>
+                    <li>Take Profit/Stop Loss</li>
+                    <li>Max Gain/Loss</li>
+                    <li>Trading Hours</li>
+                  </ul>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Note: The system automatically enables DRS at medium when the strategy is enabled. Make sure to adjust the risk settings to your desired risk level or disable if needed.
+                  </p>
+                </CardBody>
+              </Card>
+            </AccordionItem>
             <AccordionItem key="parameters" title="Adjusting Parameters">
               <Card className="bg-white/70 dark:bg-black/30 backdrop-blur-sm border border-gray-200 dark:border-white/10">
                 <CardBody>
                   <div className="bg-red-50 dark:bg-red-900/30 p-4 rounded-lg mb-4">
                     <p className="text-sm text-red-800 dark:text-red-200">
-                      <strong>Warning:</strong> Parameter adjustments should only be made by experienced traders who fully understand their impact. Incorrect settings can significantly increase risk and affect performance. If unsure, keep the default values apart from contract size/risk management.
+                      <strong>Warning:</strong> Parameter adjustments should only be made by experienced traders who fully understand their impact. Incorrect settings can significantly increase risk and affect performance. If unsure, keep the default values apart from contract size, and keep risk management enabled.
                     </p>
                   </div>
+
                   <h3 className="text-lg font-semibold text-primary mb-2">Position Sizing</h3>
                   <ul className="list-disc pl-6 mb-4 text-gray-700 dark:text-gray-300">
                     <li>TradeQuantityBase Set the number of contracts per trade (default: 5)</li>
@@ -384,6 +419,15 @@ export default function Support() {
                       </ul>
                     </li>
                     <li>MaxLossRatio: Set your maximum daily loss limit per contract (recommended: $100)</li>
+                    <li>EnableDynamicRisk: Enable/disable the Dynamic Risk System (default: true)</li>
+                    <li className="ml-4 text-gray-700 dark:text-gray-300">
+                      Risk Levels:
+                      <ul className="list-disc pl-6">
+                        <li>Low: Conservative settings</li>
+                        <li>Medium: Default balanced settings</li>
+                        <li>High: Aggressive settings</li>
+                      </ul>
+                    </li>
                   </ul>
 
                   <h3 className="text-lg font-semibold text-primary mb-2">Time Settings</h3>
