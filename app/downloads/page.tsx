@@ -10,27 +10,27 @@ interface PackageDownload {
 const packages: PackageDownload[] = [
   {
     name: 'Basic Package',
-    version: '5.1.0',
-    downloadUrl: '/downloads/TLABasic_v5.1.zip'
+    version: '5.2.0',
+    downloadUrl: '/downloads/TLABasic_v5.2.zip'
   },
   {
     name: 'Standard Package',
-    version: '5.1.0',
-    downloadUrl: '/downloads/TLAStandard_v5.1.zip'
+    version: '5.2.0',
+    downloadUrl: '/downloads/TLAStandard_v5.2.zip'
   },
   {
     name: 'Premium Package',
-    version: '5.1.0',
-    downloadUrl: '/downloads/TLAPremium_v5.1.zip'
+    version: '5.2.0',
+    downloadUrl: '/downloads/TLAPremium_v5.2.zip'
   }
 ];
 
 const changelog = {
-  version: "5.1.0",
+  version: "5.2.0",
   changes: [
-    "Dynamic Risk System - Adaptive adjustment of settings based on selected risk profile from central management server",
-    "Predictive Doji Exit - Advanced exit strategy using doji pattern recognition",
-    "ATR Reversal Detection - Prevent entering trades where ATR reversal signal has triggered"
+    "Predictive Exit - Additional exit strategies added to allow for aggresive exit strategies",
+    "Predictive TP Adjust - Adjust TP based on additional predictive analysis to maximise profits",
+    "Chase Mode Revamp - Chase trades now use a more complex entry strategy to ensure higher fill rate"
   ]
 };
 
