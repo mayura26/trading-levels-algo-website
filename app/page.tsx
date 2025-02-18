@@ -23,7 +23,7 @@ export default function Home() {
           <Card className="bg-white/70 dark:bg-black/30 backdrop-blur-sm border border-gray-200 dark:border-white/10 mb-16">
             <CardBody>
               <p className="text-gray-700 dark:text-gray-300">
-                TradingLevelsAlgo is an advanced trading system engineered for NASDAQ futures (NQ/MNQ). The algorithm processes market structure to identify optimal entry and exit points. The system is designed to run fully automated, with dynamic risk management.
+                TradingLevelsAlgo is an advanced trading system engineered for NASDAQ futures (NQ/MNQ). By analyzing market structure and volume patterns, the algorithm identifies high-probability trading opportunities with precision. The system uses moving averages and levels to spot optimal entry and exit points, running fully automated with dynamic risk management.
               </p>
             </CardBody>
           </Card>
@@ -36,29 +36,119 @@ export default function Home() {
             {/* Feature Cards */}
             <Card className="bg-white/70 dark:bg-black/30 backdrop-blur-sm border border-gray-200 dark:border-white/10">
               <CardBody>
-                <h3 className="text-xl font-semibold text-primary mb-3">Volume Structure Analysis</h3>
-                <p className="text-gray-700 dark:text-gray-300">Analyses the wick and body of the candles to build a real-time volume profile.</p>
-              </CardBody>
-            </Card>
-
-            <Card className="bg-white/70 dark:bg-black/30 backdrop-blur-sm border border-gray-200 dark:border-white/10">
-              <CardBody>
-                <h3 className="text-xl font-semibold text-primary mb-3">Dynamic Decision-Making</h3>
-                <p className="text-gray-700 dark:text-gray-300">Utilizes volume delta, trend-based analysis, and rate-of-change (RoC) on volume differentials to identify optimal opportunities and avoid risky trades.</p>
+                <h3 className="text-xl font-semibold text-primary mb-3">Laser-Sharp Entry Precision</h3>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">Unlike systems that chase with market orders, our algorithm waits for price to come to us. This patient approach means you'll never get caught offside, reducing drawdown and maximizing opportunity.</p>
+                <div className="relative w-full border-2 border-primary/20 rounded-xl overflow-hidden shadow-lg bg-gradient-to-b from-primary/5 to-primary/10 p-1" style={{ paddingBottom: '56.25%' }}>
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent dark:from-white/5">
+                    <video 
+                      className="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
+                      autoPlay 
+                      muted 
+                      loop 
+                      playsInline
+                    >
+                      <source src="/videos/sharp-entry.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
               </CardBody>
             </Card>
 
             <Card className="bg-white/70 dark:bg-black/30 backdrop-blur-sm border border-gray-200 dark:border-white/10">
               <CardBody>
                 <h3 className="text-xl font-semibold text-primary mb-3">Adaptive Risk Management</h3>
-                <p className="text-gray-700 dark:text-gray-300">Implements dynamic Take Profit (TP) and Stop Loss (SL) adjustments, chop detection, and protective levels to control risk effectively and exit trades efficiently.</p>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">Let your winners run while staying protected. The system dynamically adjusts take-profit and stop-loss levels as the trade develops, giving positions room to breathe while not giving away profits.</p>
+                <div className="relative w-full border-2 border-primary/20 rounded-xl overflow-hidden shadow-lg bg-gradient-to-b from-primary/5 to-primary/10 p-1" style={{ paddingBottom: '56.25%' }}>
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent dark:from-white/5">
+                    <video 
+                      className="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
+                      autoPlay 
+                      muted 
+                      loop 
+                      playsInline
+                    >
+                      <source src="/videos/dynamic-tp-sl.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              </CardBody>
+            </Card>
+            <Card className="bg-white/70 dark:bg-black/30 backdrop-blur-sm border border-gray-200 dark:border-white/10">
+              <CardBody>
+                <h3 className="text-xl font-semibold text-primary mb-3">Smart Chop Detection</h3>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">Save your capital during choppy conditions. Our algorithm instantly recognizes when markets lack clear direction, keeping you out of noise and ready to strike when real momentum returns.</p>
+                <div className="relative w-full border-2 border-primary/20 rounded-xl overflow-hidden shadow-lg" style={{ paddingBottom: '56.25%' }}>
+                  <video 
+                    className="absolute top-0 left-0 w-full h-full object-cover"
+                    autoPlay 
+                    muted 
+                    loop 
+                    playsInline
+                  >
+                    <source src="/videos/choppy-market-demo.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
               </CardBody>
             </Card>
 
             <Card className="bg-white/70 dark:bg-black/30 backdrop-blur-sm border border-gray-200 dark:border-white/10">
               <CardBody>
-                <h3 className="text-xl font-semibold text-primary mb-3">Trade Execution Optimization</h3>
-                <p className="text-gray-700 dark:text-gray-300">Enhances efficiency with limit orders calculated from a custom dynamic trend line, ensuring you capture opportunities without chasing trades.</p>
+                <h3 className="text-xl font-semibold text-primary mb-3">Precision Breakout Detection</h3>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">Catch the moves that matter. By identifying genuine breakouts from fakeouts, you'll be in position to capture quick, clean scalps while others are still waiting for confirmation.</p>
+                <div className="relative w-full border-2 border-primary/20 rounded-xl overflow-hidden shadow-lg bg-gradient-to-b from-primary/5 to-primary/10 p-1" style={{ paddingBottom: '56.25%' }}>
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent dark:from-white/5">
+                    <video 
+                      className="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
+                      autoPlay 
+                      muted 
+                      loop 
+                      playsInline
+                    >
+                      <source src="/videos/chase-trades.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              </CardBody>
+            </Card>
+
+            <Card className="bg-white/70 dark:bg-black/30 backdrop-blur-sm border border-gray-200 dark:border-white/10">
+              <CardBody>
+                <h3 className="text-xl font-semibold text-primary mb-3">Dynamic News Management</h3>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">Stay protected during market-moving events. Our system combines pre-scheduled news data with real-time updates from our central management server, automatically adjusting trading parameters to match each day's unique market conditions.</p>
+                <div className="relative w-full border-2 border-primary/20 rounded-xl overflow-hidden shadow-lg bg-gradient-to-b from-primary/5 to-primary/10 p-1" style={{ paddingBottom: '56.25%' }}>
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent dark:from-white/5">
+                    <img 
+                      src="/images/dynamic-news.png"
+                      alt="Dynamic News Management System"
+                      className="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
+                    />
+                  </div>
+                </div>
+              </CardBody>
+            </Card>
+
+            <Card className="bg-white/70 dark:bg-black/30 backdrop-blur-sm border border-gray-200 dark:border-white/10">
+              <CardBody>
+                <h3 className="text-xl font-semibold text-primary mb-3">Predictive Trade Management</h3>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">Cut losses before they happen. Our algorithm continuously scans market data in real-time, detecting early warning signs of trade deterioration and executing smart exits before the trade turns against you.</p>
+                <div className="relative w-full border-2 border-primary/20 rounded-xl overflow-hidden shadow-lg bg-gradient-to-b from-primary/5 to-primary/10 p-1" style={{ paddingBottom: '56.25%' }}>
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent dark:from-white/5">
+                    <video 
+                      className="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
+                      autoPlay 
+                      muted 
+                      loop 
+                      playsInline
+                    >
+                      <source src="/videos/predictive-exit.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
               </CardBody>
             </Card>
           </div>
