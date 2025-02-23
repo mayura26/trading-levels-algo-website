@@ -14,6 +14,15 @@ export default function Pricing() {
           Choose the plan that works best for you
         </h2>
 
+        <div className="bg-primary/10 border border-primary rounded-lg p-4 mb-8 text-center">
+          <p className="text-lg font-semibold text-gray-900 dark:text-white">
+            🎉 Special Offer: Get 50% off your first month!
+          </p>
+          <p className="text-gray-700 dark:text-gray-300 mt-1">
+            Use code <span className="font-mono bg-primary/20 px-2 py-1 rounded text-primary font-semibold">THEBOTCLUB</span> at checkout
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
           {/* Basic Plan */}
           <Card className="bg-white/70 dark:bg-black/30 backdrop-blur-sm border border-gray-200 dark:border-gray-700">
@@ -43,7 +52,10 @@ export default function Pricing() {
                 </li>
               </ul>
               <div className="mt-auto pt-6">
-                <p className="text-3xl font-bold text-center text-gray-900 dark:text-white">$300<span className="text-lg">/mo</span></p>
+                <div className="flex items-center justify-center gap-2">
+                  <p className="text-lg line-through text-gray-500">$300</p>
+                  <p className="text-3xl font-bold text-center text-gray-900 dark:text-white">$250<span className="text-lg">/mo</span></p>
+                </div>
                 <Link href="https://whop.com/trading-levels-algo-basic/" target="_blank" rel="noopener noreferrer">
                   <Button className="w-full mt-4" color="primary">Get Started</Button>
                 </Link>
@@ -79,7 +91,10 @@ export default function Pricing() {
                 </li>
               </ul>
               <div className="mt-auto pt-6">
-                <p className="text-3xl font-bold text-center text-gray-900 dark:text-white">$500<span className="text-lg">/mo</span></p>
+                <div className="flex items-center justify-center gap-2">
+                  <p className="text-lg line-through text-gray-500">$500</p>
+                  <p className="text-3xl font-bold text-center text-gray-900 dark:text-white">$425<span className="text-lg">/mo</span></p>
+                </div>
                 <Link href="https://whop.com/trading-levels-algo-standard/" target="_blank" rel="noopener noreferrer">
                   <Button className="w-full mt-4" color="primary">Get Started</Button>
                 </Link>
@@ -115,7 +130,10 @@ export default function Pricing() {
                 </li>
               </ul>
               <div className="mt-auto pt-6">
-                <p className="text-3xl font-bold text-center text-gray-900 dark:text-white">$900<span className="text-lg">/mo</span></p>
+                <div className="flex items-center justify-center gap-2">
+                  <p className="text-lg line-through text-gray-500">$900</p>
+                  <p className="text-3xl font-bold text-center text-gray-900 dark:text-white">$850<span className="text-lg">/mo</span></p>
+                </div>
                 <Link href="https://whop.com/trading-levels-algo-premium/" target="_blank" rel="noopener noreferrer">
                   <Button className="w-full mt-4" color="primary">Get Started</Button>
                 </Link>
