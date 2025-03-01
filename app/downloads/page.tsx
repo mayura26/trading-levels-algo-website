@@ -10,27 +10,26 @@ interface PackageDownload {
 const packages: PackageDownload[] = [
   {
     name: 'Basic Package',
-    version: '5.2.0',
-    downloadUrl: '/downloads/TLABasic_v5.2.zip'
+    version: '5.3.0',
+    downloadUrl: '/downloads/TLABasic_v5.3.zip'
   },
   {
     name: 'Standard Package',
-    version: '5.2.0',
-    downloadUrl: '/downloads/TLAStandard_v5.2.zip'
+    version: '5.3.0',
+    downloadUrl: '/downloads/TLAStandard_v5.3.zip'
   },
   {
     name: 'Premium Package',
-    version: '5.2.0',
-    downloadUrl: '/downloads/TLAPremium_v5.2.zip'
+    version: '5.3.0',
+    downloadUrl: '/downloads/TLAPremium_v5.3.zip'
   }
 ];
 
 const changelog = {
-  version: "5.2.0",
+  version: "5.3.0",
   changes: [
-    "Predictive Exit - Additional exit strategies added to allow for aggresive exit strategies",
-    "Predictive TP Adjust - Adjust TP based on additional predictive analysis to maximise profits",
-    "Chase Mode Revamp - Chase trades now use a more complex entry strategy to ensure higher fill rate"
+    "Opening Tight Trades - Added better handling of opening trades during volatile markets",
+    "Stop Loss Bug - Fixed stop loss bug that was causing trades to have stop loss too far away"
   ]
 };
 
