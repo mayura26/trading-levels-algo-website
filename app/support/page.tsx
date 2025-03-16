@@ -537,6 +537,41 @@ export default function Support() {
                 </CardBody>
               </Card>
             </AccordionItem>
+            <AccordionItem key="rollover" title="Contract Rollover">
+              <Card>
+                <CardBody>
+                  <p className="mb-4">
+                    Futures contracts need to be rolled over to the next contract before expiration. For MNQ, this typically occurs a week before expiration. I recommend to do this on the Monday evening of the week of expiration.
+                  </p>
+                  <div className="mb-4">
+                    <img
+                      src="/support/ContractRollover.png"
+                      alt="Contract Rollover Process"
+                      className="rounded-lg shadow-lg w-full max-h-[200px] object-contain object-left"
+                    />
+                  </div>
+                  <p className="mb-4">
+                    To handle contract rollover:
+                  </p>
+                  <ol className="list-decimal pl-6 mb-4">
+                    <li>Go to Tools {`>`} Database Management</li>
+                    <li>Click on the "Rollover" button</li>
+                  </ol>
+                  <p className="text-sm italic text-gray-600 dark:text-gray-400">
+                    Note: NinjaTrader may ask you to rollover the contract when you first connect, which is fine to be done anypoint after the Monday close.
+                  </p>
+                  <p className="mt-4">
+                    <Link 
+                      href="https://www.cmegroup.com/markets/equities/nasdaq/micro-e-mini-nasdaq-100.calendar.html" 
+                      className="text-primary hover:underline"
+                      target="_blank"
+                    >
+                      View CME MNQ expiration dates (marked as Settlement)
+                    </Link>
+                  </p>
+                </CardBody>
+              </Card>
+            </AccordionItem>
           </Accordion>
         </AccordionItem>
       </Accordion>
