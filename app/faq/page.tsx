@@ -37,8 +37,11 @@ const faqs = [
     {
       question: "Can this bot be run on prop firms?",
       answer: "Yes, the bot is designed to be compatible with prop firms. This bot uses low frequency trading method which trades the same as a normal trader placing trades with brackets. It is up to the user to verify that the specific prop firm supports bots. For the best prop deals and easy comparison check out <a href='https://8020prop.com/' className='text-primary hover:underline'>8020prop.com</a>."
+    },
+    {
+      question: "I get the error 'Insufficient data - need at least 20 days'",
+      answer: "This error occurs because the data series is likely not setup with the correct days to load. Review Section Configurations > Chart Configuration. This error can be bypassed if you believe your setup is correct using the parameter Override Data Check under 9. Trade Settings > Data Checks."
     }
-
   ];
 
 // Add this new component above the faqs array

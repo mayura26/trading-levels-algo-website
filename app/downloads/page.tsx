@@ -10,26 +10,27 @@ interface PackageDownload {
 const packages: PackageDownload[] = [
   {
     name: 'Basic Package',
-    version: '5.3.0',
-    downloadUrl: '/downloads/TLABasic_v5.3.zip'
+    version: '5.4.0',
+    downloadUrl: '/downloads/TLABasic_v5.4.zip'
   },
   {
     name: 'Standard Package',
-    version: '5.3.0',
-    downloadUrl: '/downloads/TLAStandard_v5.3.zip'
+    version: '5.4.0',
+    downloadUrl: '/downloads/TLAStandard_v5.4.zip'
   },
   {
     name: 'Premium Package',
-    version: '5.3.0',
-    downloadUrl: '/downloads/TLAPremium_v5.3.zip'
+    version: '5.4.0',
+    downloadUrl: '/downloads/TLAPremium_v5.4.zip'
   }
 ];
 
 const changelog = {
-  version: "5.3.0",
+  version: "5.4.0",
   changes: [
-    "Opening Tight Trades - Added better handling of opening trades during volatile markets",
-    "Stop Loss Bug - Fixed stop loss bug that was causing trades to have stop loss too far away"
+    "FibMA Protection - Added checking of Fibonacci MA to prevent false signals",
+    "Reversal Trade Protect - Protects against trade where trend structure is reversed to volume structure",
+    "Data Checks - Added checks for data to prevent setup errors on client side"
   ]
 };
 
