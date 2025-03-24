@@ -10,27 +10,27 @@ interface PackageDownload {
 const packages: PackageDownload[] = [
   {
     name: 'Basic Package',
-    version: '5.4.0',
-    downloadUrl: '/downloads/TLABasic_v5.4.zip'
+    version: '5.5.0',
+    downloadUrl: '/downloads/TLABasic_v5.5.zip'
   },
   {
     name: 'Standard Package',
-    version: '5.4.0',
-    downloadUrl: '/downloads/TLAStandard_v5.4.zip'
+    version: '5.5.0',
+    downloadUrl: '/downloads/TLAStandard_v5.5.zip'
   },
   {
     name: 'Premium Package',
-    version: '5.4.0',
-    downloadUrl: '/downloads/TLAPremium_v5.4.zip'
+    version: '5.5.0',
+    downloadUrl: '/downloads/TLAPremium_v5.5.zip'
   }
 ];
 
 const changelog = {
-  version: "5.4.0",
+  version: "5.5.0",
   changes: [
-    "FibMA Protection - Added checking of Fibonacci MA to prevent false signals",
-    "Reversal Trade Protect - Protects against trade where trend structure is reversed to volume structure",
-    "Data Checks - Added checks for data to prevent setup errors on client side"
+    "Early Finish - Automatically closes out day when close to target after midday",
+    "FibMA Bounce/Protection - FibMA is now used for bounce protection",
+    "SL Adjustment - SL adjustment fine tuned for volatile markets",
   ]
 };
 
