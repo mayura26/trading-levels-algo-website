@@ -10,27 +10,27 @@ interface PackageDownload {
 const packages: PackageDownload[] = [
   {
     name: 'Basic Package',
-    version: '5.5.0',
-    downloadUrl: '/downloads/TLABasic_v5.5.zip'
+    version: '5.6.0',
+    downloadUrl: '/downloads/TLABasic_v5.6.zip'
   },
   {
     name: 'Standard Package',
-    version: '5.5.0',
-    downloadUrl: '/downloads/TLAStandard_v5.5.zip'
+    version: '5.6.0',
+    downloadUrl: '/downloads/TLAStandard_v5.6.zip'
   },
   {
     name: 'Premium Package',
-    version: '5.5.0',
-    downloadUrl: '/downloads/TLAPremium_v5.5.zip'
+    version: '5.6.0',
+    downloadUrl: '/downloads/TLAPremium_v5.6.zip'
   }
 ];
 
 const changelog = {
-  version: "5.5.0",
+  version: "5.6.0",
   changes: [
-    "Early Finish - Automatically closes out day when close to target after midday",
-    "FibMA Bounce/Protection - FibMA is now used for bounce protection",
-    "SL Adjustment - SL adjustment fine tuned for volatile markets",
+    "Predictive Gap Mode - Enhanced entry system for uptrends targeting candle gaps for higher probability fills",
+    "Improved Chase Trades - Optimized breakaway trade detection with mid-candle fill zones for safer entries",
+    "Enhanced Fill Checks & Predictive Exit - Refined drawdown management with dynamic SL adjustment instead of premature closures",
   ]
 };
 
