@@ -10,27 +10,26 @@ interface PackageDownload {
 const packages: PackageDownload[] = [
   {
     name: 'Basic Package',
-    version: '5.6.0',
-    downloadUrl: '/downloads/TLABasic_v5.6.zip'
+    version: '5.7.0',
+    downloadUrl: '/downloads/TLABasic_v5.7.zip'
   },
   {
     name: 'Standard Package',
-    version: '5.6.0',
-    downloadUrl: '/downloads/TLAStandard_v5.6.zip'
+    version: '5.7.0',
+    downloadUrl: '/downloads/TLAStandard_v5.7.zip'
   },
   {
     name: 'Premium Package',
-    version: '5.6.0',
-    downloadUrl: '/downloads/TLAPremium_v5.6.zip'
+    version: '5.7.0',
+    downloadUrl: '/downloads/TLAPremium_v5.7.zip'
   }
 ];
 
 const changelog = {
-  version: "5.6.0",
+  version: "5.7.0",
   changes: [
-    "Predictive Gap Mode - Enhanced entry system for uptrends targeting candle gaps for higher probability fills",
-    "Improved Chase Trades - Optimized breakaway trade detection with mid-candle fill zones for safer entries",
-    "Enhanced Fill Checks & Predictive Exit - Refined drawdown management with dynamic SL adjustment instead of premature closures",
+    "Chase (Market Mode Adjusted) - Chase trades now will market in when close is near entry price",
+    "Dyanmic RSI - Predictive exit can now occur with the RSI levels being monitored"
   ]
 };
 
