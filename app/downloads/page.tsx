@@ -10,26 +10,26 @@ interface PackageDownload {
 const packages: PackageDownload[] = [
   {
     name: 'Basic Package',
-    version: '5.7.0',
-    downloadUrl: '/downloads/TLABasic_v5.7.zip'
+    version: '5.8.0',
+    downloadUrl: '/downloads/TLABasic_v5.8.zip'
   },
   {
     name: 'Standard Package',
-    version: '5.7.0',
-    downloadUrl: '/downloads/TLAStandard_v5.7.zip'
+    version: '5.8.0',
+    downloadUrl: '/downloads/TLAStandard_v5.8.zip'
   },
   {
     name: 'Premium Package',
-    version: '5.7.0',
-    downloadUrl: '/downloads/TLAPremium_v5.7.zip'
+    version: '5.8.0',
+    downloadUrl: '/downloads/TLAPremium_v5.8.zip'
   }
 ];
 
 const changelog = {
-  version: "5.7.0",
+  version: "5.8.0",
   changes: [
-    "Chase (Market Mode Adjusted) - Chase trades now will market in when close is near entry price",
-    "Dyanmic RSI - Predictive exit can now occur with the RSI levels being monitored"
+    "Chase Mode - Enhanced dynamic entry calculations for more aggressive entries across diverse market scenarios",
+    "Support/Resistance Integration - Improved fill rates through intelligent support and resistance level analysis"
   ]
 };
 
