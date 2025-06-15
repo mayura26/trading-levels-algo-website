@@ -10,26 +10,26 @@ interface PackageDownload {
 const packages: PackageDownload[] = [
   {
     name: 'Basic Package',
-    version: '5.8.0',
-    downloadUrl: '/downloads/TLABasic_v5.8.zip'
+    version: '5.9.0',
+    downloadUrl: '/downloads/TLABasic_v5.9.zip'
   },
   {
     name: 'Standard Package',
-    version: '5.8.0',
-    downloadUrl: '/downloads/TLAStandard_v5.8.zip'
+    version: '5.9.0',
+    downloadUrl: '/downloads/TLAStandard_v5.9.zip'
   },
   {
     name: 'Premium Package',
-    version: '5.8.0',
-    downloadUrl: '/downloads/TLAPremium_v5.8.zip'
+    version: '5.9.0',
+    downloadUrl: '/downloads/TLAPremium_v5.9.zip'
   }
 ];
 
 const changelog = {
-  version: "5.8.0",
+  version: "5.9.0",
   changes: [
-    "Chase Mode - Enhanced dynamic entry calculations for more aggressive entries across diverse market scenarios",
-    "Support/Resistance Integration - Improved fill rates through intelligent support and resistance level analysis"
+    "Gap Up Mode - Improved fill rates on gap up moves by using previous bars as reference",
+    "Aggressive Trim - More aggressive position trimming when offside",
   ]
 };
 
