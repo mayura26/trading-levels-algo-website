@@ -10,26 +10,29 @@ interface PackageDownload {
 const packages: PackageDownload[] = [
   {
     name: 'Basic Package',
-    version: '5.9.0',
-    downloadUrl: '/downloads/TLABasic_v5.9.zip'
+    version: '6.0.0',
+    downloadUrl: '/downloads/TLABasic_v6.0.zip'
   },
   {
     name: 'Standard Package',
-    version: '5.9.0',
-    downloadUrl: '/downloads/TLAStandard_v5.9.zip'
+    version: '6.0.0',
+    downloadUrl: '/downloads/TLAStandard_v6.0.zip'
   },
   {
     name: 'Premium Package',
-    version: '5.9.0',
-    downloadUrl: '/downloads/TLAPremium_v5.9.zip'
+    version: '6.0.0',
+    downloadUrl: '/downloads/TLAPremium_v6.0.zip'
   }
 ];
 
 const changelog = {
-  version: "5.9.0",
+  version: "6.0.0",
   changes: [
-    "Gap Up Mode - Improved fill rates on gap up moves by using previous bars as reference",
-    "Aggressive Trim - More aggressive position trimming when offside",
+  "Volume Candle - New volume impulse indicator to mark potential reversal points",
+  "Sharp Reversal - Trades near open analysed for rapid volume acceleration changes to optimize exit timing",
+  "Improved Aggressive Trim - Better trim exits in non-optimal trades",
+  "Improved Entry Fills - Better trade fills near the close"
+
   ]
 };
 
