@@ -10,29 +10,26 @@ interface PackageDownload {
 const packages: PackageDownload[] = [
   {
     name: 'Basic Package',
-    version: '6.0.0',
-    downloadUrl: '/downloads/TLABasic_v6.0.zip'
+    version: '6.1.0',
+    downloadUrl: '/downloads/TLABasic_v6.1.zip'
   },
   {
     name: 'Standard Package',
-    version: '6.0.0',
-    downloadUrl: '/downloads/TLAStandard_v6.0.zip'
+    version: '6.1.0',
+    downloadUrl: '/downloads/TLAStandard_v6.1.zip'
   },
   {
     name: 'Premium Package',
-    version: '6.0.0',
-    downloadUrl: '/downloads/TLAPremium_v6.0.zip'
+    version: '6.1.0',
+    downloadUrl: '/downloads/TLAPremium_v6.1.zip'
   }
 ];
 
 const changelog = {
-  version: "6.0.0",
+  version: "6.1.0",
   changes: [
-  "Volume Candle - New volume impulse indicator to mark potential reversal points",
-  "Sharp Reversal - Trades near open analysed for rapid volume acceleration changes to optimize exit timing",
-  "Improved Aggressive Trim - Better trim exits in non-optimal trades",
-  "Improved Entry Fills - Better trade fills near the close"
-
+  "Predictive Exit - Reworked to be smoother and more reliable",
+  "Chase Trades - Better use of mid open-close fills"
   ]
 };
 
