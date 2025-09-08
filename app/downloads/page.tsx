@@ -10,26 +10,28 @@ interface PackageDownload {
 const packages: PackageDownload[] = [
   {
     name: 'Basic Package',
-    version: '6.1.0',
-    downloadUrl: '/downloads/TLABasic_v6.1.zip'
+    version: '6.2.0',
+    downloadUrl: '/downloads/TLABasic_v6.2.zip'
   },
   {
     name: 'Standard Package',
-    version: '6.1.0',
-    downloadUrl: '/downloads/TLAStandard_v6.1.zip'
+    version: '6.2.0',
+    downloadUrl: '/downloads/TLAStandard_v6.2.zip'
   },
   {
     name: 'Premium Package',
-    version: '6.1.0',
-    downloadUrl: '/downloads/TLAPremium_v6.1.zip'
+    version: '6.2.0',
+    downloadUrl: '/downloads/TLAPremium_v6.2.zip'
   }
 ];
 
 const changelog = {
-  version: "6.1.0",
+  version: "6.2.0",
   changes: [
-  "Predictive Exit - Reworked to be smoother and more reliable",
-  "Chase Trades - Better use of mid open-close fills"
+    "Predictive Reversal Trades - Anticipates volume-triggered reversals and enters earlier for better entries",
+    "ATR-Based Trade Analysis - Uses ATR to adapt entries across high and low volatility",
+    "Range Day Detection - Detects range-bound sessions and avoids risky breakout attempts",
+    "S1 Day Protection - Adds EMA-based safeguards tailored to S1 days to reduce risk"
   ]
 };
 
